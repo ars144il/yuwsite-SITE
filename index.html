@@ -24,8 +24,6 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--dark);font-family:var(--out);font-weight:300;overflow-x:hidden}
 
-
-
 /* PAGES */
 .page{display:none;min-height:100vh;animation:fadeIn .4s ease}
 .page.active{display:block}
@@ -34,14 +32,14 @@ body{background:var(--bg);color:var(--dark);font-family:var(--out);font-weight:3
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:22px 64px;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
 nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding:15px 64px;border-bottom:1px solid var(--border)}
-.nav-logo{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.nav-logo{text-decoration:none;display:flex;flex-direction:column;line-height:1;cursor:pointer;}
 .nav-logo-main{font-family:var(--cor);font-size:26px;font-weight:600;letter-spacing:.08em;color:var(--dark)}
 .nav-logo-main span{color:var(--gold)}
 .nav-logo-sub{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:1px}
 .nav-links{display:flex;gap:2px;background:rgba(255,255,255,.8);border:1px solid var(--border);border-radius:100px;padding:4px}
-.nav-links a{font-size:12px;font-weight:500;color:var(--muted);text-decoration:none;padding:8px 18px;border-radius:100px;transition:all .2s;letter-spacing:.02em}
+.nav-links a{font-size:12px;font-weight:500;color:var(--muted);text-decoration:none;padding:8px 18px;border-radius:100px;transition:all .2s;letter-spacing:.02em;cursor:pointer;}
 .nav-links a:hover,.nav-links a.active{background:var(--dark);color:var(--white)}
-.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--dark);padding:12px 28px;border-radius:100px;font-size:12px;font-weight:600;text-decoration:none;transition:all .3s;letter-spacing:.04em;border:none;font-family:var(--out)}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--dark);padding:12px 28px;border-radius:100px;font-size:12px;font-weight:600;text-decoration:none;transition:all .3s;letter-spacing:.04em;border:none;font-family:var(--out);cursor:pointer;}
 .nav-cta:hover{transform:scale(1.05);box-shadow:0 8px 28px rgba(201,168,76,.4)}
 
 /* ══ HOME ══ */
@@ -56,9 +54,9 @@ nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding
 .hero-h1 .out{-webkit-text-stroke:1.5px var(--dark);color:transparent}
 .hero-p{font-size:15px;line-height:1.9;color:var(--muted);max-width:420px;margin-bottom:44px;opacity:0;animation:up .6s .6s both}
 .hero-btns{display:flex;gap:14px;margin-bottom:60px;opacity:0;animation:up .6s .8s both}
-.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--dark);padding:16px 38px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;transition:all .3s;letter-spacing:.02em;display:inline-flex;align-items:center;gap:8px}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--dark);padding:16px 38px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;transition:all .3s;letter-spacing:.02em;display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:none;font-family:var(--out)}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(201,168,76,.4)}
-.btn-ghost{border:1.5px solid var(--border);color:var(--dark);padding:16px 38px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none;transition:all .25s}
+.btn-ghost{border:1.5px solid var(--border);color:var(--dark);background:transparent;padding:16px 38px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none;transition:all .25s;cursor:pointer;font-family:var(--out)}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 .hero-stats{display:flex;gap:40px;opacity:0;animation:up .6s 1s both}
 .hs-n{font-family:var(--cor);font-size:40px;font-weight:400;color:var(--dark);line-height:1}
@@ -76,7 +74,7 @@ nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding
 
 /* SERVICES strip */
 .services-strip{background:var(--dark);padding:80px 64px}
-.ss-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px}
+.ss-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:2px;margin-top:48px} /* Changed to 2 columns since one service is removed */
 .ss-item{padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:all .3s;position:relative;overflow:hidden}
 .ss-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .ss-item:hover{background:rgba(255,255,255,.06)}
@@ -86,10 +84,22 @@ nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding
 .ss-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:20px}
 .ss-price{font-size:15px;font-weight:600;color:var(--gold2)}
 
+/* REVIEWS */
+.reviews-section { padding: 100px 64px 80px; background: var(--bg); }
+.reviews-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+.review-card { background: var(--white); padding: 32px; border-radius: 20px; border: 1px solid var(--border); transition: all 0.3s; }
+.review-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(201,168,76,.1); border-color: var(--gold-border); }
+.review-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.review-avatar { width: 50px; height: 50px; border-radius: 50%; background: var(--gold-light); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; color: var(--gold); border: 1px solid var(--gold-border); }
+.review-author { font-size: 15px; font-weight: 600; color: var(--dark); }
+.review-project { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.review-stars { color: var(--gold); font-size: 14px; margin-bottom: 12px; }
+.review-text { font-size: 14px; line-height: 1.6; color: var(--muted); font-style: italic; }
+
 /* ══ PORTFOLIO PAGE ══ */
 .portfolio-page{padding:100px 64px 80px}
 .port-filters{display:flex;gap:8px;flex-wrap:wrap;margin:32px 0 48px}
-.pf-btn{padding:9px 22px;border-radius:100px;font-size:12px;font-weight:500;border:1.5px solid var(--border);color:var(--muted);background:var(--white);transition:all .2s;font-family:var(--out)}
+.pf-btn{padding:9px 22px;border-radius:100px;font-size:12px;font-weight:500;border:1.5px solid var(--border);color:var(--muted);background:var(--white);transition:all .2s;font-family:var(--out);cursor:pointer;}
 .pf-btn.active,.pf-btn:hover{background:var(--dark);color:#fff;border-color:var(--dark)}
 .port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .port-card{background:var(--white);border-radius:22px;overflow:hidden;border:1px solid var(--border);transition:all .4s;position:relative}
@@ -149,7 +159,7 @@ nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding
 /* messenger modal */
 #msg-modal{display:none;position:fixed;inset:0;z-index:99999;background:rgba(28,22,16,.5);backdrop-filter:blur(8px);align-items:center;justify-content:center}
 .msg-modal-inner{background:#fff;border-radius:28px;padding:44px 40px;width:100%;max-width:380px;text-align:center;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.15)}
-.msg-close{position:absolute;top:16px;right:16px;background:var(--card);border:none;width:34px;height:34px;border-radius:50%;font-size:16px;color:var(--muted);display:flex;align-items:center;justify-content:center;font-family:var(--out);transition:all .2s}
+.msg-close{position:absolute;top:16px;right:16px;background:var(--card);border:none;width:34px;height:34px;border-radius:50%;font-size:16px;color:var(--muted);display:flex;align-items:center;justify-content:center;font-family:var(--out);transition:all .2s;cursor:pointer;}
 .msg-close:hover{background:var(--dark);color:#fff}
 .msg-title{font-family:var(--cor);font-size:28px;font-weight:400;margin-bottom:6px}
 .msg-sub{font-size:13px;color:var(--muted);margin-bottom:28px}
@@ -173,13 +183,14 @@ nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding
 .cf-title{font-family:var(--cor);font-size:32px;font-weight:300;margin-bottom:6px;letter-spacing:.02em}
 .cf-sub{font-size:13px;color:var(--muted);margin-bottom:32px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-.fg{margin-bottom:0}
+.fg{margin-bottom:16px}
+.fg:last-of-type {margin-bottom: 0;}
 .fg label{display:block;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 .fg input,.fg select,.fg textarea{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:13px 16px;font-family:var(--out);font-size:14px;font-weight:300;color:var(--dark);outline:none;transition:border-color .2s,box-shadow .2s;appearance:none}
 .fg input::placeholder,.fg textarea::placeholder{color:var(--muted)}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,168,76,.1)}
 .fg textarea{resize:none;height:100px}
-.form-submit{width:100%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--dark);border:none;padding:16px;border-radius:12px;font-family:var(--out);font-size:14px;font-weight:700;margin-top:8px;transition:all .3s;letter-spacing:.04em}
+.form-submit{width:100%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--dark);border:none;padding:16px;border-radius:12px;font-family:var(--out);font-size:14px;font-weight:700;margin-top:8px;transition:all .3s;letter-spacing:.04em;cursor:pointer;}
 .form-submit:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(201,168,76,.4)}
 
 /* COMMON */
@@ -192,7 +203,7 @@ nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding
 /* FOOTER */
 footer{background:var(--dark);padding:72px 64px 40px}
 .ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:56px;margin-bottom:48px}
-.ft-logo{text-decoration:none;display:block;margin-bottom:14px}
+.ft-logo{text-decoration:none;display:block;margin-bottom:14px;cursor:pointer;}
 .ft-logo-main{font-family:var(--cor);font-size:26px;font-weight:600;color:#fff;letter-spacing:.06em}
 .ft-logo-main span{color:var(--gold)}
 .ft-logo-sub{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:2px}
@@ -200,7 +211,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
 .ft-col h4{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:18px}
 .ft-col ul{list-style:none}
 .ft-col li{margin-bottom:10px}
-.ft-col a,.ft-col button{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;background:none;border:none;font-family:var(--out);padding:0}
+.ft-col a,.ft-col button{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;background:none;border:none;font-family:var(--out);padding:0;cursor:pointer;}
 .ft-col a:hover,.ft-col button:hover{color:var(--gold)}
 .ft-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin-bottom:24px}
 .ft-bottom{display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.2)}
@@ -218,13 +229,21 @@ footer{background:var(--dark);padding:72px 64px 40px}
   .nav-links{display:none}
   .hero,.about-hero-grid,.contacts-grid{grid-template-columns:1fr}
   .hero{padding:100px 24px 60px}
-  .portfolio-page,.about-page,.contacts-page,.services-strip{padding:72px 24px}
+  .portfolio-page,.about-page,.contacts-page,.services-strip, .reviews-section{padding:72px 24px}
   .port-grid{grid-template-columns:1fr}
   .process-grid{grid-template-columns:1fr 1fr}
   .about-vals{grid-template-columns:1fr}
   .ss-grid{grid-template-columns:1fr}
+  .reviews-grid {grid-template-columns: repeat(2, 1fr);}
+  .form-row {grid-template-columns: 1fr;}
   footer{padding:56px 24px 32px}
   .ft-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:480px){
+    .process-grid{grid-template-columns:1fr}
+    .reviews-grid {grid-template-columns: 1fr;}
+    .ft-grid{grid-template-columns:1fr}
+    .hero-stats {gap: 24px; flex-wrap: wrap;}
 }
 </style>
 </head>
@@ -236,29 +255,39 @@ footer{background:var(--dark);padding:72px 64px 40px}
     <button class="msg-close" onclick="document.getElementById('msg-modal').style.display='none'">✕</button>
     <div style="font-size:32px;margin-bottom:14px">✨</div>
     <div class="msg-title">Написать мне</div>
-    <div class="msg-sub">Выберите удобный мессенджер</div>
+    <div class="msg-sub">Выберите удобный способ связи</div>
     <div class="msg-btns">
       <a href="https://t.me/yuwsite" target="_blank" class="msg-btn msg-btn-tg">
         <span class="msg-btn-icon">✈️</span>
-        <div class="msg-btn-text"><div class="msg-btn-name">Telegram</div><div class="msg-btn-handle">@yuwsite</div></div>
+        <div class="msg-btn-text">
+            <div class="msg-btn-name">Telegram</div>
+            <div class="msg-btn-handle">@yuwsite</div>
+        </div>
         <span class="msg-btn-arrow">→</span>
       </a>
-
+      <a href="tel:+79780676020" class="msg-btn" style="background:#f4f0e8;border-color:#e8e0d0;">
+        <span class="msg-btn-icon">📞</span>
+        <div class="msg-btn-text">
+            <div class="msg-btn-name">Телефон</div>
+            <div class="msg-btn-handle" style="color:var(--dark)">+7 978 067 60 20</div>
+        </div>
+        <span class="msg-btn-arrow" style="color:var(--dark)">→</span>
+      </a>
     </div>
   </div>
 </div>
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="https://beaty1.netlify.app" class="nav-logo" onclick="showPage('home')">
+  <a class="nav-logo" onclick="showPage('home')">
     <div class="nav-logo-main">YUW<span>SITE</span></div>
     <div class="nav-logo-sub">Разработка сайтов</div>
   </a>
   <div class="nav-links">
-    <a href="#" class="active" id="nl-home" onclick="showPage('home')">Главная</a>
-    <a href="#" id="nl-portfolio" onclick="showPage('portfolio')">Портфолио</a>
-    <a href="#" id="nl-about" onclick="showPage('about')">Обо мне</a>
-    <a href="#" id="nl-contacts" onclick="showPage('contacts')">Контакты</a>
+    <a class="active" id="nl-home" onclick="showPage('home')">Главная</a>
+    <a id="nl-portfolio" onclick="showPage('portfolio')">Портфолио</a>
+    <a id="nl-about" onclick="showPage('about')">Обо мне</a>
+    <a id="nl-contacts" onclick="showPage('contacts')">Контакты</a>
   </div>
   <button class="nav-cta" onclick="document.getElementById('msg-modal').style.display='flex'">Написать мне</button>
 </nav>
@@ -276,9 +305,9 @@ footer{background:var(--dark);padding:72px 64px 40px}
         который<br>
         <em>работает</em>
       </h1>
-      <p class="hero-p">Молодой разработчик, делаю качественные и недорогие сайты для бизнеса любого масштаба.</p>
+      <p class="hero-p">Ориентация на результат, высокая скорость работы и гарантия качества для бизнеса любого масштаба.</p>
       <div class="hero-btns">
-        <a href="#" class="btn-gold" onclick="showPage('portfolio')">Смотреть работы</a>
+        <button class="btn-gold" onclick="showPage('portfolio')">Смотреть работы</button>
         <button class="btn-ghost" onclick="document.getElementById('msg-modal').style.display='flex'">Обсудить проект</button>
       </div>
       <div class="hero-stats">
@@ -314,29 +343,76 @@ footer{background:var(--dark);padding:72px 64px 40px}
       <div class="ss-item reveal">
         <div class="ss-icon">📄</div>
         <div class="ss-name">Лендинг</div>
-        <div class="ss-desc">Одностраничный сайт для продвижения услуги или продукта. Адаптив, форма заявки, SEO-основа. Срок: 1–2 дня.</div>
+        <div class="ss-desc">Одностраничный сайт для продвижения. Адаптив, базовая защита от DDoS (Cloudflare), SEO-основа. Срок: 1–2 дня.</div>
         <div class="ss-price">от 5 000 ₽</div>
       </div>
       <div class="ss-item reveal">
         <div class="ss-icon">🏢</div>
         <div class="ss-name">Корпоративный сайт</div>
-        <div class="ss-desc">Многостраничный сайт с каталогом, командой, контактами. Полноценное представление бизнеса. Срок: 4–5 дней.</div>
+        <div class="ss-desc">Многостраничный сайт с каталогом, командой. Полноценное представление бизнеса под ключ (включая защиту Cloudflare). Срок: 4–5 дней.</div>
         <div class="ss-price">от 10 000 ₽</div>
       </div>
-      <div class="ss-item reveal">
-        <div class="ss-icon">☁️</div>
-        <div class="ss-name">Настройка Cloudflare</div>
-        <div class="ss-desc">Защита от DDoS, CDN, SSL-сертификат, ускорение загрузки. Сайт работает стабильно 24/7.</div>
-        <div class="ss-price">1 000 ₽</div>
-      </div>
     </div>
+  </section>
+
+  <section class="reviews-section">
+      <div class="sec-head reveal">
+          <div class="page-eyebrow">Отзывы</div>
+          <h2 class="page-title">Что говорят <em>клиенты</em></h2>
+      </div>
+      <div class="reviews-grid">
+          <div class="review-card reveal">
+              <div class="review-header">
+                  <div class="review-avatar">А</div>
+                  <div>
+                      <div class="review-author">Александр В.</div>
+                      <div class="review-project">Агентство недвижимости</div>
+                  </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <div class="review-text">"Сайт сделали очень быстро, выглядит премиально. Конверсия заявок выросла заметно. Рекомендую!"</div>
+          </div>
+          <div class="review-card reveal">
+              <div class="review-header">
+                  <div class="review-avatar">Е</div>
+                  <div>
+                      <div class="review-author">Елена С.</div>
+                      <div class="review-project">Стоматология</div>
+                  </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <div class="review-text">"Отличный подход к делу. Учли все пожелания по дизайну, форма записи работает идеально. Спасибо за терпение и результат."</div>
+          </div>
+          <div class="review-card reveal">
+              <div class="review-header">
+                  <div class="review-avatar">М</div>
+                  <div>
+                      <div class="review-author">Максим Д.</div>
+                      <div class="review-project">Ресторан</div>
+                  </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <div class="review-text">"Наш новый сайт для ресторана собирает кучу комплиментов от гостей. Очень стильно и современно."</div>
+          </div>
+          <div class="review-card reveal">
+              <div class="review-header">
+                  <div class="review-avatar">О</div>
+                  <div>
+                      <div class="review-author">Ольга К.</div>
+                      <div class="review-project">Бьюти-сфера</div>
+                  </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <div class="review-text">"Лендинг получился нежным и красивым, именно то, что я хотела. Клиентам очень удобно записываться онлайн."</div>
+          </div>
+      </div>
   </section>
 
   <footer>
     <div class="ft-gold-line"></div>
     <div class="ft-grid">
       <div>
-        <a href="#" class="ft-logo" onclick="showPage('home')">
+        <a class="ft-logo" onclick="showPage('home')">
           <div class="ft-logo-main">YUW<span>SITE</span></div>
           <div class="ft-logo-sub">Разработка сайтов</div>
         </a>
@@ -356,7 +432,6 @@ footer{background:var(--dark);padding:72px 64px 40px}
         <ul>
           <li><button onclick="showPage('portfolio')">Лендинг от 5 000 ₽</button></li>
           <li><button onclick="showPage('portfolio')">Корп. сайт от 10 000 ₽</button></li>
-          <li><button onclick="showPage('contacts')">Cloudflare 1 000 ₽</button></li>
           <li><button onclick="showPage('contacts')">Оставить заявку</button></li>
         </ul>
       </div>
@@ -365,6 +440,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
         <ul>
           <li><span style="font-size:13px;color:rgba(255,255,255,.25)">Пн–Вс: 09:00–22:00</span></li>
           <li><a href="https://t.me/yuwsite" target="_blank">Telegram</a></li>
+          <li><a href="tel:+79780676020">+7 978 067 60 20</a></li>
         </ul>
       </div>
     </div>
@@ -469,7 +545,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
           <span class="port-preview-icon">🏠</span>
           <div class="port-niche">Недвижимость</div>
           <div class="port-overlay">
-            <a href="https://estaterealthy.netlify.app" target="_blank" target="_blank" href="https://estaterealthy.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
+            <a href="https://estaterealthy.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
           </div>
         </div>
         <div class="port-body">
@@ -495,9 +571,6 @@ footer{background:var(--dark);padding:72px 64px 40px}
           <div class="port-tags"><span class="port-tag">Лендинг</span><span class="port-tag">Ресторан</span><span class="port-tag">Тёмный стиль</span></div>
         </div>
       </div>
-
-    
-
     </div>
   </div>
 
@@ -505,15 +578,15 @@ footer{background:var(--dark);padding:72px 64px 40px}
     <div class="ft-gold-line"></div>
     <div class="ft-grid">
       <div>
-        <a href="#" class="ft-logo" onclick="showPage('home')">
+        <a class="ft-logo" onclick="showPage('home')">
           <div class="ft-logo-main">YUW<span>SITE</span></div>
           <div class="ft-logo-sub">Разработка сайтов</div>
         </a>
         <p class="ft-desc">Создаю сайты под ключ. Быстро, красиво, недорого.</p>
       </div>
-      <div class="ft-col"><h4>Навигация</h4><ul><li><button onclick="showPage('portfolio')">Портфолио</button></li><li><button onclick="showPage('about')">Обо мне</button></li><li><button onclick="showPage('contacts')">Контакты</button></li></ul></div>
-      <div class="ft-col"><h4>Услуги</h4><ul><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Лендинг от 5 000 ₽</span></li><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Корп. сайт от 10 000 ₽</span></li><li><button onclick="showPage('contacts')">Оставить заявку</button></li></ul></div>
-      <div class="ft-col"><h4>Контакты</h4><ul><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Пн–Вс: 09:00–22:00</span></li><li><a href="https://t.me/yuwsite" target="_blank">Telegram</a></li></ul></div>
+      <div class="ft-col"><h4>Навигация</h4><ul><li><button onclick="showPage('home')">Главная</button></li><li><button onclick="showPage('portfolio')">Портфолио</button></li><li><button onclick="showPage('about')">Обо мне</button></li><li><button onclick="showPage('contacts')">Контакты</button></li></ul></div>
+      <div class="ft-col"><h4>Услуги</h4><ul><li><button onclick="showPage('portfolio')">Лендинг от 5 000 ₽</button></li><li><button onclick="showPage('portfolio')">Корп. сайт от 10 000 ₽</button></li><li><button onclick="showPage('contacts')">Оставить заявку</button></li></ul></div>
+      <div class="ft-col"><h4>Контакты</h4><ul><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Пн–Вс: 09:00–22:00</span></li><li><a href="https://t.me/yuwsite" target="_blank">Telegram</a></li><li><a href="tel:+79780676020">+7 978 067 60 20</a></li></ul></div>
     </div>
     <hr class="ft-divider"/><div class="ft-bottom"><span>© 2025 YUWSITE.</span><span>Разработка сайтов под ключ</span></div>
   </footer>
@@ -536,13 +609,13 @@ footer{background:var(--dark);padding:72px 64px 40px}
       <div class="reveal">
         <div class="page-eyebrow">Обо мне</div>
         <h1 class="page-title" style="margin-bottom:24px">Привет,<br>я <em>Арсений</em></h1>
-        <p class="about-body">Молодой разработчик, делаю качественные и недорогие сайты для бизнеса любого масштаба — от небольшого стартапа до крупной компании.</p>
-        <p class="about-body">Каждый сайт делаю с нуля — уникальный дизайн под вашу нишу, адаптив под телефон и ПК, никаких шаблонов. Лендинг сдаю за 1–2 дня, корпоративный сайт за 4–5 дней.</p>
+        <p class="about-body">Специалист по веб-разработке, ориентированный на результат. Делаю быстрые, качественные и современные сайты, которые помогают бизнесу расти.</p>
+        <p class="about-body">Каждый проект создается индивидуально под ваши задачи. Никаких шаблонных решений — только чистый код, продуманный дизайн и надежная защита. Гарантирую соблюдение сроков: лендинг за 1–2 дня, корпоративный сайт за 4–5 дней.</p>
         <div class="about-vals">
           <div class="aval"><div class="aval-icon">⚡</div><div class="aval-t">Быстро</div><div class="aval-d">Лендинг за 1–2 дня, корп. сайт за 4–5 дней</div></div>
-          <div class="aval"><div class="aval-icon">🎨</div><div class="aval-t">Уникально</div><div class="aval-d">Каждый сайт с нуля, без шаблонов</div></div>
+          <div class="aval"><div class="aval-icon">🛡️</div><div class="aval-t">Надежно</div><div class="aval-d">Сайты "под ключ" с защитой Cloudflare</div></div>
           <div class="aval"><div class="aval-icon">📱</div><div class="aval-t">Адаптивно</div><div class="aval-d">Отлично выглядит на телефоне и ПК</div></div>
-          <div class="aval"><div class="aval-icon">🤝</div><div class="aval-t">Честно</div><div class="aval-d">Называю цену сразу, без скрытых платежей</div></div>
+          <div class="aval"><div class="aval-t">📈</div><div class="aval-t">На результат</div><div class="aval-d">Сайты, которые конвертируют посетителей в клиентов</div></div>
         </div>
       </div>
     </div>
@@ -555,17 +628,17 @@ footer{background:var(--dark);padding:72px 64px 40px}
         <div class="proc-item reveal"><div class="proc-num">01</div><div class="proc-t">Бриф</div><div class="proc-d">Обсуждаем задачу, нишу, стиль и пожелания. Занимает 15–30 минут.</div></div>
         <div class="proc-item reveal"><div class="proc-num">02</div><div class="proc-t">Разработка</div><div class="proc-d">Создаю сайт по вашему ТЗ. Показываю промежуточный результат.</div></div>
         <div class="proc-item reveal"><div class="proc-num">03</div><div class="proc-t">Правки</div><div class="proc-d">Вносим правки до полного согласования. Обычно 1–2 итерации.</div></div>
-        <div class="proc-item reveal"><div class="proc-num">04</div><div class="proc-t">Сдача</div><div class="proc-d">Размещаю сайт на хостинге и передаю вам. Готово!</div></div>
+        <div class="proc-item reveal"><div class="proc-num">04</div><div class="proc-t">Сдача</div><div class="proc-d">Размещаю сайт на хостинге, настраиваю защиту и передаю вам.</div></div>
       </div>
     </div>
   </div>
   <footer>
     <div class="ft-gold-line"></div>
     <div class="ft-grid">
-      <div><a href="#" class="ft-logo" onclick="showPage('home')"><div class="ft-logo-main">YUW<span>SITE</span></div><div class="ft-logo-sub">Разработка сайтов</div></a><p class="ft-desc">Создаю сайты под ключ.</p></div>
+      <div><a class="ft-logo" onclick="showPage('home')"><div class="ft-logo-main">YUW<span>SITE</span></div><div class="ft-logo-sub">Разработка сайтов</div></a><p class="ft-desc">Создаю сайты под ключ.</p></div>
       <div class="ft-col"><h4>Навигация</h4><ul><li><button onclick="showPage('home')">Главная</button></li><li><button onclick="showPage('portfolio')">Портфолио</button></li><li><button onclick="showPage('about')">Обо мне</button></li><li><button onclick="showPage('contacts')">Контакты</button></li></ul></div>
-      <div class="ft-col"><h4>Услуги</h4><ul><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Лендинг от 5 000 ₽</span></li><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Корп. сайт от 10 000 ₽</span></li><li><button onclick="showPage('contacts')">Оставить заявку</button></li></ul></div>
-      <div class="ft-col"><h4>Контакты</h4><ul><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Пн–Вс: 09:00–22:00</span></li><li><a href="https://t.me/yuwsite" target="_blank">Telegram</a></li></ul></div>
+      <div class="ft-col"><h4>Услуги</h4><ul><li><button onclick="showPage('portfolio')">Лендинг от 5 000 ₽</button></li><li><button onclick="showPage('portfolio')">Корп. сайт от 10 000 ₽</button></li><li><button onclick="showPage('contacts')">Оставить заявку</button></li></ul></div>
+      <div class="ft-col"><h4>Контакты</h4><ul><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Пн–Вс: 09:00–22:00</span></li><li><a href="https://t.me/yuwsite" target="_blank">Telegram</a></li><li><a href="tel:+79780676020">+7 978 067 60 20</a></li></ul></div>
     </div>
     <hr class="ft-divider"/><div class="ft-bottom"><span>© 2025 YUWSITE.</span><span>Разработка сайтов под ключ</span></div>
   </footer>
@@ -592,7 +665,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
           </div>
           <div class="ci-c reveal" onclick="document.getElementById('msg-modal').style.display='flex'" style="cursor:pointer">
             <div class="ci-icon">💬</div>
-            <div><div class="ci-title">Мессенджеры</div><div class="ci-val" style="color:var(--gold);font-weight:500">Telegram →</div></div>
+            <div><div class="ci-title">Связь</div><div class="ci-val" style="color:var(--gold);font-weight:500">Telegram / Телефон →</div></div>
           </div>
           <div class="ci-c reveal">
             <div class="ci-icon">💰</div>
@@ -607,15 +680,24 @@ footer{background:var(--dark);padding:72px 64px 40px}
           <div class="fg"><label>Имя</label><input type="text" id="cf-name" placeholder="Ваше имя"></div>
           <div class="fg"><label>Телефон / Telegram</label><input type="text" id="cf-contact" placeholder="+7 или @username"></div>
         </div>
-        <div style="margin-bottom:16px" class="fg"><label>Тип сайта</label>
-          <select id="cf-type">
-            <option>Лендинг — от 5 000 ₽</option>
-            <option>Корпоративный сайт — от 10 000 ₽</option>
-            <option>Настройка Cloudflare — 1 000 ₽</option>
-            <option>Не определился, нужна консультация</option>
-          </select>
+        <div class="form-row">
+          <div class="fg"><label>Тип сайта</label>
+            <select id="cf-type">
+              <option>Лендинг — от 5 000 ₽</option>
+              <option>Корпоративный сайт — от 10 000 ₽</option>
+              <option>Не определился, нужна консультация</option>
+            </select>
+          </div>
+          <div class="fg"><label>Примерный бюджет</label>
+            <select id="cf-budget">
+              <option>До 10 000 ₽</option>
+              <option>10 000 ₽ - 30 000 ₽</option>
+              <option>От 30 000 ₽</option>
+              <option>Нужно обсудить</option>
+            </select>
+          </div>
         </div>
-        <div style="margin-bottom:0" class="fg"><label>Расскажите о проекте</label><textarea id="cf-desc" placeholder="Ниша, пожелания по стилю, что должно быть на сайте..."></textarea></div>
+        <div class="fg"><label>Расскажите о проекте</label><textarea id="cf-desc" placeholder="Ниша, пожелания по стилю, что должно быть на сайте..."></textarea></div>
         <button class="form-submit" onclick="sendToTelegram()">Отправить заявку →</button>
       </div>
     </div>
@@ -623,10 +705,10 @@ footer{background:var(--dark);padding:72px 64px 40px}
   <footer>
     <div class="ft-gold-line"></div>
     <div class="ft-grid">
-      <div><a href="#" class="ft-logo" onclick="showPage('home')"><div class="ft-logo-main">YUW<span>SITE</span></div><div class="ft-logo-sub">Разработка сайтов</div></a><p class="ft-desc">Создаю сайты под ключ.</p></div>
+      <div><a class="ft-logo" onclick="showPage('home')"><div class="ft-logo-main">YUW<span>SITE</span></div><div class="ft-logo-sub">Разработка сайтов</div></a><p class="ft-desc">Создаю сайты под ключ.</p></div>
       <div class="ft-col"><h4>Навигация</h4><ul><li><button onclick="showPage('home')">Главная</button></li><li><button onclick="showPage('portfolio')">Портфолио</button></li><li><button onclick="showPage('about')">Обо мне</button></li><li><button onclick="showPage('contacts')">Контакты</button></li></ul></div>
-      <div class="ft-col"><h4>Услуги</h4><ul><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Лендинг от 5 000 ₽</span></li><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Корп. сайт от 10 000 ₽</span></li><li><button onclick="showPage('contacts')">Оставить заявку</button></li></ul></div>
-      <div class="ft-col"><h4>Контакты</h4><ul><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Пн–Вс: 09:00–22:00</span></li><li><a href="https://t.me/yuwsite" target="_blank">Telegram</a></li></ul></div>
+      <div class="ft-col"><h4>Услуги</h4><ul><li><button onclick="showPage('portfolio')">Лендинг от 5 000 ₽</button></li><li><button onclick="showPage('portfolio')">Корп. сайт от 10 000 ₽</button></li><li><button onclick="showPage('contacts')">Оставить заявку</button></li></ul></div>
+      <div class="ft-col"><h4>Контакты</h4><ul><li><span style="font-size:13px;color:rgba(255,255,255,.25)">Пн–Вс: 09:00–22:00</span></li><li><a href="https://t.me/yuwsite" target="_blank">Telegram</a></li><li><a href="tel:+79780676020">+7 978 067 60 20</a></li></ul></div>
     </div>
     <hr class="ft-divider"/><div class="ft-bottom"><span>© 2025 YUWSITE.</span><span>Разработка сайтов под ключ</span></div>
   </footer>
@@ -677,14 +759,22 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.dataset.i=i%5;obs.obser
     const name    = document.getElementById('cf-name')?.value.trim() || '—';
     const contact = document.getElementById('cf-contact')?.value.trim() || '—';
     const type    = document.getElementById('cf-type')?.value || '—';
+    const budget  = document.getElementById('cf-budget')?.value || '—';
     const desc    = document.getElementById('cf-desc')?.value.trim() || '—';
 
-    if (!name || name === '—') { alert('Введите ваше имя'); return; }
-    if (!contact || contact === '—') { alert('Введите телефон или Telegram'); return; }
+    if (!name || name === '—') { 
+        alertMessage('Введите ваше имя'); 
+        return; 
+    }
+    if (!contact || contact === '—') { 
+        alertMessage('Введите телефон или Telegram'); 
+        return; 
+    }
 
-    const text = `🔔 Новая заявка с YUWSITE\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n🖥 Тип: ${type}\n📝 Описание: ${desc}`;
+    const text = `🔔 Новая заявка с YUWSITE\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n🖥 Тип: ${type}\n💰 Бюджет: ${budget}\n📝 Описание: ${desc}`;
 
     const btn = document.querySelector('.form-submit');
+    const originalText = btn.textContent;
     btn.textContent = 'Отправляем...';
     btn.disabled = true;
 
@@ -701,9 +791,10 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.dataset.i=i%5;obs.obser
         document.getElementById('cf-name').value = '';
         document.getElementById('cf-contact').value = '';
         document.getElementById('cf-type').selectedIndex = 0;
+        document.getElementById('cf-budget').selectedIndex = 0;
         document.getElementById('cf-desc').value = '';
         setTimeout(() => {
-          btn.textContent = 'Отправить заявку →';
+          btn.textContent = originalText;
           btn.style.background = '';
           btn.disabled = false;
         }, 3000);
@@ -715,11 +806,53 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.dataset.i=i%5;obs.obser
       btn.style.background = '#a33';
       btn.disabled = false;
       setTimeout(() => {
-        btn.textContent = 'Отправить заявку →';
+        btn.textContent = originalText;
         btn.style.background = '';
       }, 3000);
     }
   }
+
+  // Custom alert to replace native alert()
+  function alertMessage(msg) {
+      const existingAlert = document.getElementById('custom-alert');
+      if (existingAlert) existingAlert.remove();
+
+      const alertBox = document.createElement('div');
+      alertBox.id = 'custom-alert';
+      alertBox.style.cssText = `
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #a33;
+          color: white;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-family: 'Outfit', sans-serif;
+          font-size: 14px;
+          z-index: 100000;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          animation: slideUp 0.3s ease-out;
+      `;
+      alertBox.textContent = msg;
+      document.body.appendChild(alertBox);
+
+      setTimeout(() => {
+          alertBox.style.opacity = '0';
+          alertBox.style.transition = 'opacity 0.3s ease';
+          setTimeout(() => alertBox.remove(), 300);
+      }, 3000);
+  }
+  
+  // Add animation style for custom alert
+  const style = document.createElement('style');
+  style.innerHTML = `
+      @keyframes slideUp {
+          from { transform: translate(-50%, 20px); opacity: 0; }
+          to { transform: translate(-50%, 0); opacity: 1; }
+      }
+  `;
+  document.head.appendChild(style);
 
 </script>
 </body>
