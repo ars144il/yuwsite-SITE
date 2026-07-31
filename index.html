@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Разработка сайтов под ключ. Ориентация на результат, высокая скорость работы и гарантия качества для бизнеса любого масштаба. Лендинги от 5 000 ₽." />
 <title>YUWSITE — Разработка сайтов</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -74,7 +75,7 @@ nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding
 
 /* SERVICES strip */
 .services-strip{background:var(--dark);padding:80px 64px}
-.ss-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:2px;margin-top:48px} /* Changed to 2 columns since one service is removed */
+.ss-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:2px;margin-top:48px} 
 .ss-item{padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:all .3s;position:relative;overflow:hidden}
 .ss-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .ss-item:hover{background:rgba(255,255,255,.06)}
@@ -457,7 +458,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
   <div class="portfolio-page">
     <div class="sec-head reveal">
       <div class="page-eyebrow">Мои работы</div>
-      <h1 class="page-title">Портфолио <em>проектов</em></h1>
+      <h2 class="page-title">Портфолио <em>проектов</em></h2>
       <p style="font-size:15px;color:var(--muted);margin-top:14px;max-width:480px;line-height:1.8">Каждый сайт создан с нуля — уникальный дизайн под нишу и задачу клиента</p>
     </div>
     <div class="port-filters">
@@ -608,7 +609,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
       </div>
       <div class="reveal">
         <div class="page-eyebrow">Обо мне</div>
-        <h1 class="page-title" style="margin-bottom:24px">Привет,<br>я <em>Арсений</em></h1>
+        <h2 class="page-title" style="margin-bottom:24px">Привет,<br>я <em>Арсений</em></h2>
         <p class="about-body">Специалист по веб-разработке, ориентированный на результат. Делаю быстрые, качественные и современные сайты, которые помогают бизнесу расти.</p>
         <p class="about-body">Каждый проект создается индивидуально под ваши задачи. Никаких шаблонных решений — только чистый код, продуманный дизайн и надежная защита. Гарантирую соблюдение сроков: лендинг за 1–2 дня, корпоративный сайт за 4–5 дней.</p>
         <div class="about-vals">
@@ -649,7 +650,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
   <div class="contacts-page">
     <div class="sec-head reveal">
       <div class="page-eyebrow">Связаться</div>
-      <h1 class="page-title">Обсудим <em>ваш проект</em></h1>
+      <h2 class="page-title">Обсудим <em>ваш проект</em></h2>
       <p style="font-size:15px;color:var(--muted);margin-top:14px;max-width:440px;line-height:1.8">Отвечаю в течение часа. Первая консультация — бесплатно.</p>
     </div>
     <div class="contacts-grid">
@@ -773,16 +774,22 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.dataset.i=i%5;obs.obser
 
     const text = `🔔 Новая заявка с YUWSITE\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n🖥 Тип: ${type}\n💰 Бюджет: ${budget}\n📝 Описание: ${desc}`;
 
+    // ==========================================
+    // ТОКЕН И ID УЖЕ ВСТАВЛЕНЫ:
+    const botToken = '8871417665:AAECJ-SvOx9bIuTPShjvI9WN790qHvYsJaQ'; 
+    const chatId = '8634170373';
+    // ==========================================
+
     const btn = document.querySelector('.form-submit');
     const originalText = btn.textContent;
     btn.textContent = 'Отправляем...';
     btn.disabled = true;
 
     try {
-      const res = await fetch('https://api.telegram.org/bot8512363815:AAHJ0beBLLOiPzMZ6n4iKJfgJRw_9TMpuz4/sendMessage', {
+      const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ chat_id: '6351248296', text, parse_mode: 'HTML' })
+        body: JSON.stringify({ chat_id: chatId, text, parse_mode: 'HTML' })
       });
       const data = await res.json();
       if (data.ok) {
@@ -857,3 +864,4 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.dataset.i=i%5;obs.obser
 </script>
 </body>
 </html>
+```
