@@ -4,8 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!-- SEO & Open Graph -->
-<title>Заказать сайт под ключ | Разработка лендингов и корпоративных сайтов — YUWSITE</title>
-<meta name="description" content="YUWSITE — профессиональная разработка сайтов под ключ. Лендинги от 5 000 ₽, корпоративные сайты. Стильный дизайн, SEO-база, высокая конверсия и гарантия качества." />
+<title>YUWSITE — Заказать сайт под ключ | Разработка лендингов</title>
+<meta name="description" content="Профессиональная разработка сайтов под ключ. Лендинги от 5 000 ₽, корпоративные сайты от 10 000 ₽. Стильный дизайн, мобильный адаптив, SEO-база и высокая конверсия." />
 <meta name="keywords" content="заказать сайт, разработка сайтов, создание сайтов под ключ, веб-разработчик, сделать лендинг, сайт для бизнеса, Харцызск, Донецк, ДНР, веб студия" />
 <meta property="og:title" content="YUWSITE — Разработка сайтов, которые приносят клиентов" />
 <meta property="og:description" content="Ориентация на результат, высокая скорость работы и стильный дизайн. Лендинги от 5 000 ₽." />
@@ -123,10 +123,12 @@ nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding
 .port-card:hover{transform:translateY(-8px);box-shadow:0 24px 56px rgba(201,168,76,.15);border-color:var(--gold-border)}
 .port-preview{height:220px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .port-preview-bg{position:absolute;inset:0;transition:transform .5s}
+.port-preview-img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:1;transition:transform .5s ease-out}
+.port-card:hover .port-preview-img{transform:scale(1.08)}
 .port-card:hover .port-preview-bg{transform:scale(1.06)}
 .port-preview-icon{font-size:48px;opacity:.2;position:relative;z-index:1}
 .port-overlay{position:absolute;inset:0;background:rgba(28,22,16,0);display:flex;align-items:center;justify-content:center;transition:all .3s;z-index:2}
-.port-card:hover .port-overlay{background:rgba(28,22,16,.5)}
+.port-card:hover .port-overlay{background:rgba(28,22,16,.6)}
 .port-demo-btn{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--dark);padding:12px 28px;border-radius:100px;font-size:12px;font-weight:700;text-decoration:none;opacity:0;transform:translateY(10px);transition:all .3s;letter-spacing:.04em}
 .port-card:hover .port-demo-btn{opacity:1;transform:translateY(0)}
 .port-niche{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);padding:5px 12px;border-radius:100px;font-size:10px;font-weight:600;color:var(--dark);z-index:3;letter-spacing:.04em}
@@ -496,9 +498,8 @@ footer{background:var(--dark);padding:72px 64px 40px}
 
       <!-- 1. RD Black -->
       <div class="port-card reveal" data-cat="landing auto">
-        <div class="port-preview" style="background:linear-gradient(145deg,#050000,#1f0505)">
-          <div class="port-preview-bg" style="background:linear-gradient(145deg,#050000,#1f0505);position:absolute;inset:0"></div>
-          <span class="port-preview-icon" style="color:#FF0015">🚘</span>
+        <div class="port-preview">
+          <img src="rdblack.jpg" alt="RD Black" class="port-preview-img">
           <div class="port-niche">Авто</div>
           <div class="port-overlay">
             <a href="https://rdblack.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -513,9 +514,8 @@ footer{background:var(--dark);padding:72px 64px 40px}
 
       <!-- 2. Beauty Master -->
       <div class="port-card reveal" data-cat="landing beauty">
-        <div class="port-preview" style="background:linear-gradient(145deg,#f5efe8,#e8ddd0)">
-          <div class="port-preview-bg" style="background:linear-gradient(145deg,#f5efe8,#e8ddd0);position:absolute;inset:0"></div>
-          <span class="port-preview-icon">💆</span>
+        <div class="port-preview">
+          <img src="as.png" alt="Beauty Master" class="port-preview-img">
           <div class="port-niche">Красота</div>
           <div class="port-overlay">
             <a href="https://beaty1.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -528,11 +528,10 @@ footer{background:var(--dark);padding:72px 64px 40px}
         </div>
       </div>
 
-      <!-- 2. Restaurant ROUGE -->
+      <!-- 3. Restaurant ROUGE -->
       <div class="port-card reveal" data-cat="landing food">
-        <div class="port-preview" style="background:linear-gradient(145deg,#130b0b,#200e0e)">
-          <div class="port-preview-bg" style="background:linear-gradient(145deg,#130b0b,#200e0e);position:absolute;inset:0"></div>
-          <span class="port-preview-icon" style="color:#c0281e">🍷</span>
+        <div class="port-preview">
+          <img src="rouge.jpg" alt="Restaurant ROUGE" class="port-preview-img">
           <div class="port-niche">Ресторан</div>
           <div class="port-overlay">
             <a href="https://restrouge.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -545,11 +544,10 @@ footer{background:var(--dark);padding:72px 64px 40px}
         </div>
       </div>
 
-      <!-- 3. DENTAplus -->
+      <!-- 4. DENTAplus -->
       <div class="port-card reveal" data-cat="landing med">
-        <div class="port-preview" style="background:linear-gradient(145deg,#f7f9fc,#eef2f7)">
-          <div class="port-preview-bg" style="background:linear-gradient(145deg,#f7f9fc,#eef2f7);position:absolute;inset:0"></div>
-          <span class="port-preview-icon">🦷</span>
+        <div class="port-preview">
+          <img src="dentaplus.png" alt="DENTAplus" class="port-preview-img">
           <div class="port-niche">Стоматология</div>
           <div class="port-overlay">
             <a href="https://dentplus.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -562,11 +560,10 @@ footer{background:var(--dark);padding:72px 64px 40px}
         </div>
       </div>
 
-      <!-- 4. Smile Lab -->
+      <!-- 5. Smile Lab -->
       <div class="port-card reveal" data-cat="landing med">
-        <div class="port-preview" style="background:linear-gradient(145deg,#f5faf7,#e8f5f0)">
-          <div class="port-preview-bg" style="background:linear-gradient(145deg,#f5faf7,#e8f5f0);position:absolute;inset:0"></div>
-          <span class="port-preview-icon" style="color:#0d6e4f">✨</span>
+        <div class="port-preview">
+          <img src="smilelab.png" alt="Smile Lab" class="port-preview-img">
           <div class="port-niche">Стоматология</div>
           <div class="port-overlay">
             <a href="https://smilelab2.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -579,11 +576,10 @@ footer{background:var(--dark);padding:72px 64px 40px}
         </div>
       </div>
 
-      <!-- 5. ESTATE Agency -->
+      <!-- 6. ESTATE Agency -->
       <div class="port-card reveal" data-cat="corp">
-        <div class="port-preview" style="background:linear-gradient(145deg,#f9f7f4,#f0ebe2)">
-          <div class="port-preview-bg" style="background:linear-gradient(145deg,#f9f7f4,#f0ebe2);position:absolute;inset:0"></div>
-          <span class="port-preview-icon">🏠</span>
+        <div class="port-preview">
+          <img src="estate.png" alt="ESTATE Agency" class="port-preview-img">
           <div class="port-niche">Недвижимость</div>
           <div class="port-overlay">
             <a href="https://estaterealthy.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -596,11 +592,10 @@ footer{background:var(--dark);padding:72px 64px 40px}
         </div>
       </div>
 
-      <!-- 6. Restaurant NOIR -->
+      <!-- 7. Restaurant NOIR -->
       <div class="port-card reveal" data-cat="landing food">
-        <div class="port-preview" style="background:linear-gradient(145deg,#0d0808,#1a0f0f)">
-          <div class="port-preview-bg" style="background:linear-gradient(145deg,#0d0808,#1a0f0f);position:absolute;inset:0"></div>
-          <span class="port-preview-icon" style="color:#fff">🍽️</span>
+        <div class="port-preview">
+          <img src="noir.jpg" alt="Restaurant NOIR" class="port-preview-img">
           <div class="port-niche">Ресторан</div>
           <div class="port-overlay">
             <a href="https://restaurantnoire.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -912,4 +907,3 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.dataset.i=i%5;obs.obser
 </script>
 </body>
 </html>
-```
