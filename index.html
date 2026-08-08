@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Yandex Verification -->
+<meta name="yandex-verification" content="88c7331eaaeca870" />
 <!-- SEO & Open Graph -->
 <title>YUWSITE — Заказать сайт под ключ | Разработка лендингов</title>
 <meta name="description" content="Профессиональная разработка сайтов под ключ. Лендинги от 5 000 ₽, корпоративные сайты от 10 000 ₽. Стильный дизайн, мобильный адаптив, SEO-база и высокая конверсия." />
@@ -499,7 +501,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
       <!-- 1. RD Black -->
       <div class="port-card reveal" data-cat="landing auto">
         <div class="port-preview">
-          <img src="rdblack.png" alt="RD Black" class="port-preview-img">
+          <img src="rdblack.jpg" alt="RD Black" class="port-preview-img">
           <div class="port-niche">Авто</div>
           <div class="port-overlay">
             <a href="https://rdblack.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -531,7 +533,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
       <!-- 3. Restaurant ROUGE -->
       <div class="port-card reveal" data-cat="landing food">
         <div class="port-preview">
-          <img src="rouge.png" alt="Restaurant ROUGE" class="port-preview-img">
+          <img src="rouge.jpg" alt="Restaurant ROUGE" class="port-preview-img">
           <div class="port-niche">Ресторан</div>
           <div class="port-overlay">
             <a href="https://restrouge.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -595,7 +597,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
       <!-- 7. Restaurant NOIR -->
       <div class="port-card reveal" data-cat="landing food">
         <div class="port-preview">
-          <img src="noir.png" alt="Restaurant NOIR" class="port-preview-img">
+          <img src="noir.jpg" alt="Restaurant NOIR" class="port-preview-img">
           <div class="port-niche">Ресторан</div>
           <div class="port-overlay">
             <a href="https://restaurantnoire.netlify.app" target="_blank" class="port-demo-btn">Смотреть демо →</a>
@@ -618,7 +620,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
           <div class="ft-logo-main">YUW<span>SITE</span></div>
           <div class="ft-logo-sub">Разработка сайтов</div>
         </a>
-        <p class="ft-desc">Создаю сайты под ключ. Быстро, красиво, недорого.</p>
+        <p class="ft-desc">Создаю сайты под ключ. Быстро, красиво, недорого. Пишите — отвечу в течение часа.</p>
       </div>
       <div class="ft-col"><h4>Навигация</h4><ul><li><button onclick="showPage('home')">Главная</button></li><li><button onclick="showPage('portfolio')">Портфолио</button></li><li><button onclick="showPage('about')">Обо мне</button></li><li><button onclick="showPage('contacts')">Контакты</button></li></ul></div>
       <div class="ft-col"><h4>Услуги</h4><ul><li><button onclick="showPage('portfolio')">Лендинг от 5 000 ₽</button></li><li><button onclick="showPage('portfolio')">Корп. сайт от 10 000 ₽</button></li><li><button onclick="showPage('contacts')">Оставить заявку</button></li></ul></div>
@@ -651,7 +653,7 @@ footer{background:var(--dark);padding:72px 64px 40px}
           <div class="aval"><div class="aval-icon">⚡</div><div class="aval-t">Быстро</div><div class="aval-d">Лендинг за 1–2 дня, корп. сайт за 4–5 дней</div></div>
           <div class="aval"><div class="aval-icon">🛡️</div><div class="aval-t">Надежно</div><div class="aval-d">Сайты "под ключ" с защитой Cloudflare</div></div>
           <div class="aval"><div class="aval-icon">📱</div><div class="aval-t">Адаптивно</div><div class="aval-d">Отлично выглядит на телефоне и ПК</div></div>
-          <div class="aval"><div class="aval-t">📈</div><div class="aval-t">На результат</div><div class="aval-d">Сайты, которые конвертируют посетителей в клиентов</div></div>
+          <div class="aval"><div class="aval-icon">📈</div><div class="aval-t">На результат</div><div class="aval-d">Сайты, которые конвертируют посетителей в клиентов</div></div>
         </div>
       </div>
     </div>
@@ -816,11 +818,9 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.dataset.i=i%5;obs.obser
 
     const text = `🔔 Новая заявка с YUWSITE\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n🖥 Тип: ${type}\n💰 Бюджет: ${budget}\n📝 Описание: ${desc}`;
 
-    // Разбиваем токен на части, чтобы GitHub не ругался
     const t1 = '8871417665';
     const t2 = 'AAECJ-SvOx9bIuTPShjvI9WN790qHvYsJaQ';
     const botToken = t1 + ':' + t2; 
-    
     const chatId = '8634170373';
 
     const btn = document.querySelector('.form-submit');
@@ -856,13 +856,12 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.dataset.i=i%5;obs.obser
       btn.style.background = '#a33';
       btn.disabled = false;
       setTimeout(() => {
-        btn.textContent = originalText;
+        btn.textContent = originalTest;
         btn.style.background = '';
       }, 3000);
     }
   }
 
-  // Custom alert to replace native alert()
   function alertMessage(msg) {
       const existingAlert = document.getElementById('custom-alert');
       if (existingAlert) existingAlert.remove();
@@ -894,7 +893,6 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.dataset.i=i%5;obs.obser
       }, 3000);
   }
   
-  // Add animation style for custom alert
   const style = document.createElement('style');
   style.innerHTML = `
       @keyframes slideUp {
